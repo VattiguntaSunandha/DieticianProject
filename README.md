@@ -1,1 +1,0 @@
-# Dietician-UI-Automation-Hackathon
