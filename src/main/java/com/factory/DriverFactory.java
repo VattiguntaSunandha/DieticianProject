@@ -25,7 +25,7 @@ public class DriverFactory {
 			} catch (IOException e) {
 				e.getCause();
 			}
-		} 
+		}
 		public static ThreadLocal<WebDriver> tlDriver= new ThreadLocal<>();
 		//This method is used to initialize the tlocal driver on the basis of given browser 
 		public WebDriver init_driver(String browser) {
