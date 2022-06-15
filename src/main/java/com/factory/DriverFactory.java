@@ -13,29 +13,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
-<<<<<<< HEAD
-		public DriverFactory() throws IOException {
-			try {
-				prop = new Properties();
-				FileInputStream FIS = new FileInputStream("./src/test/resources/config/Config.properties");
-				prop.load(FIS);
-			} catch (IOException e) {
-				e.getCause();
-			}
-		} 
-		public static ThreadLocal<WebDriver> tlDriver= new ThreadLocal<>();
-		//This method is used to initialize the tlocal driver on the basis of given browser 
-		public WebDriver init_driver(String browser) {
-			System.out.println("browser value is:"  +browser);
-			if (browser.equals("chrome")) {
-				WebDriverManager.chromedriver().setup();
-				tlDriver.set(new ChromeDriver());		
-			}
-			
-			else if (browser.equals("firefox")) {
-				WebDriverManager.firefoxdriver().setup();
-				tlDriver.set(new FirefoxDriver());
-=======
 	public WebDriver driver;
 
 	public static Properties prop;
@@ -60,7 +37,6 @@ public class DriverFactory {
 		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver());
->>>>>>> refs/heads/master
 		}
 
 		else if (browser.equals("firefox")) {
