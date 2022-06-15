@@ -3,100 +3,112 @@
   <groupId>Dietician-Ui-Automation-Hackathon</groupId>
   <artifactId>Dietician-Ui-Automation-Hackathon</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
-  
 <properties>
-
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<junit.version>4.13.1</junit.version>
-		<cucumber.version>6.9.0</cucumber.version>
+		<!--<junit.version>4.13.1</junit.version>
+		<cucumber.version>6.9.0</cucumber.version>-->
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<maven.surefire.version>2.22.2</maven.surefire.version>
-
-
 	</properties>
-
 <repositories>
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
-    
-</repositories>
-   
-
-<dependencies>
+ </repositories>
+ <dependencies>
 <dependency>
 			<groupId>com.github.ralfstuckert.pdfbox-layout</groupId>
 			<artifactId>pdfbox2-layout</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-
 <dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>${cucumber.version}</version>
+			<version>7.2.1</version>
 			<scope>test</scope>
 		</dependency>
-
-
-		<dependency>
+<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>${cucumber.version}</version>
+			<version>7.2.1</version>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
+<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>gherkin</artifactId>
+<version>22.0.0</version>
+</dependency>
+		
+		
+<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+			<version>4.1.1</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-jvm</artifactId>
+<version>7.2.1</version>
+<type>pom</type>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-jvm-deps</artifactId>
+<version>1.0.6</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+<dependency>
+<groupId>net.masterthought</groupId>
+<artifactId>cucumber-reporting</artifactId>
+<version>5.6.1</version>
+</dependency>
 
 	<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-		<dependency>
+<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.0.3</version>
 		</dependency>
-
-		<dependency>
+<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
+			<version>7.5</version>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
+<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
-			<version>${cucumber.version}</version>
+			<version>4.2.3</version>
 			<scope>test</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-		<dependency>
+<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>4.1.2</version>
 		</dependency>
-
-
 <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.0.8</version>
         </dependency>
 
-        <dependency>
+<dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>klov-reporter</artifactId>
             <version>5.0.8</version>
@@ -120,16 +132,12 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.2</version>
 		</dependency>
-
-
-
+	
+	
 	</dependencies>
-
 	<build>
 		<plugins>
-
-
-			<plugin>
+		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.version}</version>
@@ -152,19 +160,6 @@
 					<useUnlimitedThreads>false</useUnlimitedThreads>
 				</configuration>
 			</plugin>
-
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
-				<version>3.0.0-M3</version> <executions> <execution> <goals> <goal>integration-test</goal> 
-				</goals> <configuration> UNCOMMENT - To add any exclusions if required <excludes> 
-				<exclude>**/*IT*.java</exclude> </excludes> <includes> UNCOMMENT BELOW LINE 
-				- To execute feature files with a single runner <include>**/MyTestRunner.java</include> 
-				UNCOMMENT BELOW LINE - To execute feature files with multiple runners <include>**/*Runner.java</include> 
-				</includes> UNCOMMENT BELOW 3 LINES - To execute using parallel or combination 
-				option <parallel>methods</parallel> <threadCount>4</threadCount> <perCoreThreadCount>true</perCoreThreadCount> 
-				UNCOMMENT BELOW 3 LINES - To execute using forking or combination option 
-				<forkCount>2</forkCount> <reuseForks>true</reuseForks> <reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory> 
-				</configuration> </execution> </executions> </plugin> -->
-
 		</plugins>
 	</build>
 </project>
