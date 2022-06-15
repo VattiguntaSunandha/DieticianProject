@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RegisterPageTitle {
 	private WebDriver driver;
+	public String homePage = "https://www.dieticiangroup.com/home";
 	public String registerUrl = "https://www.dieticiangroup.com/register";
 	
 	//constructor of the page class
