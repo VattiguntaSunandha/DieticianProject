@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 	@RunWith(Cucumber.class)
-	@CucumberOptions(features = {"src/test/resources/com/features"}, glue = { "stepdefinitions", "AppHooks" },
+	@CucumberOptions(features = {".\\src/test/resources/com/features"}, glue = { "stepdefinitions", "AppHooks" },
 			plugin={"pretty","html:target/HtmlReports","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 			monochrome = true,
 			dryRun = false
