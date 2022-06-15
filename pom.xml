@@ -3,13 +3,28 @@
   <groupId>Dietician-Ui-Automation-Hackathon</groupId>
   <artifactId>Dietician-Ui-Automation-Hackathon</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+<<<<<<< HEAD
 <properties>
+=======
+
+ <properties>
+
+>>>>>>> refs/heads/master
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<<<<<<< HEAD
 		<java.version>1.8</java.version>
 		<!--<junit.version>4.13.1</junit.version>
 		<cucumber.version>6.9.0</cucumber.version>-->
+=======
+>>>>>>> refs/heads/master
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<maven.surefire.version>2.22.2</maven.surefire.version>
+<<<<<<< HEAD
+=======
+        <java.version>1.8</java.version>
+
+
+>>>>>>> refs/heads/master
 	</properties>
 <repositories>
         <repository>
@@ -23,7 +38,13 @@
 			<artifactId>pdfbox2-layout</artifactId>
 			<version>1.0.1</version>
 		</dependency>
+<<<<<<< HEAD
+=======
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+>>>>>>> refs/heads/master
 <dependency>
+<<<<<<< HEAD
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>7.2.1</version>
@@ -76,6 +97,64 @@
 <artifactId>cucumber-reporting</artifactId>
 <version>5.6.1</version>
 </dependency>
+=======
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-java</artifactId>
+<version>7.2.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-junit</artifactId>
+<version>7.2.1</version>
+<!--<scope>test</scope>-->
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.13.2</version>
+</dependency>
+		
+<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>gherkin</artifactId>
+<version>22.0.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-java</artifactId>
+<version>4.1.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-jvm</artifactId>
+<version>7.2.1</version>
+<type>pom</type>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-jvm-deps</artifactId>
+<version>1.0.6</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+<dependency>
+<groupId>net.masterthought</groupId>
+<artifactId>cucumber-reporting</artifactId>
+<version>5.6.1</version>
+</dependency>
+		
+>>>>>>> refs/heads/master
 
 	<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
@@ -86,15 +165,27 @@
 <dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
+<<<<<<< HEAD
 			<version>7.5</version>
 			<scope>test</scope>
 		</dependency>
 <dependency>
+=======
+			<version>6.14.3</version>
+			</dependency>
+
+		<dependency>
+>>>>>>> refs/heads/master
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
+<<<<<<< HEAD
 			<version>4.2.3</version>
 			<scope>test</scope>
 		</dependency>
+=======
+            <version>4.2.3</version>
+			</dependency>
+>>>>>>> refs/heads/master
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
