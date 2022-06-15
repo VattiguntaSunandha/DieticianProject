@@ -1,27 +1,5 @@
 package com.pages;
 
-<<<<<<< HEAD
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-
-public class SignInPage {
-	
-	WebDriver driver;
-
-	public SignInPage(WebDriver driver) {
-		
-		//Constructor of the page class
-		this.driver=driver;
-		try {
-			PageFactory.initElements(driver, this);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
-	
-	//Swati's SignInPage.java code will come here.
-	
-=======
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -165,6 +143,5 @@ public class SignInPage {
 	        Matcher matcher = pattern.matcher(name);
 	        return matcher.matches();
 	    }
->>>>>>> branch 'master' of https://github.com/geeta2008/Dietician-UI-Automation-Hackathon.git
 
 }
