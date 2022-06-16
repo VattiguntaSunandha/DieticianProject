@@ -22,7 +22,7 @@ Feature: Test report data
  @tag1
   Scenario: Verify test report PDF file
     Given User is on 'View Patient Test Reports' pagee
-    When When user clicks on 'View PDF'
+    When user clicks on 'View PDF'
     Then PDF is opened in proper readable format
     
 
