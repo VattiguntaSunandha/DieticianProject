@@ -119,8 +119,9 @@
 <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>5.0.8</version>
+            <version>5.0.9</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.aventstack</groupId>
@@ -136,8 +137,9 @@
 
         <dependency>
             <groupId>tech.grasshopper</groupId>
-            <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.1.0</version>
+            <artifactId>extentreports-cucumber6-adapter</artifactId>
+            <version>2.9.0</version>
+            <scope>test</scope>
         </dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
@@ -171,6 +173,7 @@
 				<version>${maven.surefire.version}</version>
 				<configuration>
 					<includes>
+                        <include>**/MyTestRunner.java</include>
 						<include>**/ParallelRun.java</include>
 					</includes>
 					<parallel>methods</parallel>
